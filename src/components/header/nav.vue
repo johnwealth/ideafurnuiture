@@ -227,7 +227,7 @@
 			
                             <!-- Item With Sub -->
                             <li>
-                                <a href="" class="mn-has-sub">ABOUT IDEA NIG <i class="fa fa-angle-down"></i></a>
+                                <a href="#" class="mn-has-sub">ABOUT IDEA NIG <i class="fa fa-angle-down"></i></a>
                                 
                                 <!-- Sub -->
                                 <ul class="mn-sub to-left">
@@ -253,7 +253,7 @@
                             
                             <!-- Item With Sub -->
                             <li>
-                                <a href="services.html" class="mn-has-sub">VALUE ADDED<i class="fa fa-angle-down"></i></a>
+                                <a href="#" class="mn-has-sub">VALUE ADDED<i class="fa fa-angle-down"></i></a>
                                 
                                 <!-- Sub Multilevel -->
                                 <ul class="mn-sub mn-has-multi">
@@ -261,23 +261,18 @@
                                     <li class="mn-sub-multi">
                                         
                                    <ul>
-						              <li>  <a href="services.html"><i class="fa fa-columns fa-sm"></i> Design</a>
-                                      </li>
-                                            <li>
-                                                <a href="services.html"><i class="fa fa-plus-circle fa-sm"></i> Support</a>
-                                            </li>
-                                            <li>
-                                                <a href="services.html"><i class="fa fa-tachometer fa-sm"></i> Tracking</a>
-                                            </li>
-                                            <li>
-                                                <a href="services.html"><i class="fa fa-link fa-sm"></i>Installation</a>
-                                            </li>
-                                            <li>
-                                                <a href="services.html"><i class="fa fa-th-large fa-sm"></i>Bulk Haulage</a>
-                                            </li>
-                                            <li>
-                                                <a href="services.html"><i class="fa fa-align-justify fa-sm"></i>Delivery</a>
-                                            </li>
+						            
+                                                <router-link tag="li" :to="{ name: 'service' }"><a href="">Design</a></router-link>
+                           
+                                                <router-link tag="li" :to="{ name: 'service' }"><a href="">Support</a></router-link>
+                        
+                                                <router-link tag="li" :to="{ name: 'service' }"><a href="">Tracking</a></router-link>
+
+                                                <router-link tag="li" :to="{ name: 'service' }"><a href="">Installation</a></router-link>
+
+                                                <router-link tag="li" :to="{ name: 'service' }"><a href="">Bulk Haulage</a></router-link>
+                           
+                                                <router-link tag="li" :to="{ name: 'service' }"><a href="">Delivery</a></router-link>
                                             
                                         </ul>
                                         

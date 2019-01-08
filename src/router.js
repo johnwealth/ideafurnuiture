@@ -13,6 +13,8 @@ import Service from './components/pages/service.vue'
 import Faq from './components/pages/faq.vue'
 import Checkout from './components/pages/checkout.vue'
 import Order from './components/pages/order.vue'
+import ProductslistingPage from './components/pages/productslistingpage.vue'
+import Ordersummary from './components/pages/Ordersummary.vue'
 
 Vue.use(VueRouter)
 
@@ -39,7 +41,8 @@ const routes = [
   { path: '/checkout', component: Checkout, name:'checkout' },
   { path: '/faq', component: Faq, name:'faq' },
   { path: '/order', component: Order, name:'order' },
-
+  { path: '/productslistingpage', component: ProductslistingPage, name:'productslistingpage' },
+  { path: '/Ordersummary', component: Ordersummary, name:'Ordersummary' }
 ]
 
 export default new VueRouter({mode: 'history', routes})
