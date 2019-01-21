@@ -23,7 +23,7 @@
                                             
                                             <!-- Username -->
                                             <div class="form-group">
-                                                <input type="text" name="username" id="username" v-model="username" class="input-md round form-control" placeholder="Username" pattern=".{3,100}" required>
+                                                <input type="text" name="phone_no" id="phone_no" v-model="phone_no" class="input-md round form-control" placeholder="phone_no" pattern=".{3,100}" required>
                                             </div>
                                             
                                             <!-- Password -->
@@ -33,7 +33,7 @@
                                             
                                             <!-- Re-enter Password -->
                                             <div class="form-group">
-                                                <input type="password" name="re-password" v-model="re_password" id="re-password" class="input-md round form-control" placeholder="Re-enter Password" pattern=".{5,100}" required>
+                                                <input type="password" name="confirm-password" v-model="confirm_password" id="confirm-password" class="input-md round form-control" placeholder="Re-enter Password" pattern=".{5,100}" required>
                                             </div>
                                                 
                                         </div>
@@ -57,12 +57,15 @@
   export default {
     data () {
       return {
-        email: '',
+        
         first_name: '',
         last_name: '',
+        email: '',
+        phone_no: '',
         password: '',
+        confirm_password: '',
         re_password: '',
-        username: '',
+      
        
       }
     },
@@ -70,16 +73,17 @@
      
       onSubmit () {
         const formData = {
-          email: this.email,
           first_name: this.first_name,
           last_name: this.last_name,
+          email: this.email,
+          phone_no: this.phone_no,
           password: this.password,
-          re_password: this.re_password,
-          username: this.username,
+          confirm_password: this.confrim_password,
+   
          
         }
         console.log(formData)
-        this.$store.dispatch('signup', formData)
+        this.$store.dispatch('/signup', formData)
       }
     }
   }

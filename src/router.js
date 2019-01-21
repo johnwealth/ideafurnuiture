@@ -11,6 +11,8 @@ import Contact from './components/pages/contact.vue'
 import About from './components/pages/about.vue'
 import Service from './components/pages/service.vue'
 import Faq from './components/pages/faq.vue'
+import Shipping from './components/pages/shipping.vue'
+import Cart from './components/pages/cart.vue'
 import Checkout from './components/pages/checkout.vue'
 import Order from './components/pages/order.vue'
 import ProductslistingPage from './components/pages/productslistingpage.vue'
@@ -37,8 +39,11 @@ const routes = [
 
   { path: '/contact', component: Contact, name:'contact' },
   { path: '/about', component: About, name:'about' },
+  { path: '/dashboard', component: DashboardPage, name:'dashboard' },
   { path: '/service', component: Service, name:'service' },
   { path: '/checkout', component: Checkout, name:'checkout' },
+  { path: '/cart', component: Cart, name:'cart' },
+  { path: '/shipping', component: Shipping, name:'shipping' },
   { path: '/faq', component: Faq, name:'faq' },
   { path: '/order', component: Order, name:'order' },
   { path: '/productslistingpage', component: ProductslistingPage, name:'productslistingpage' },

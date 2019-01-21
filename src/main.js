@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import VueResource from 'vue-resource'
 import App from './App.vue'
 import axios from 'axios'
 
@@ -6,23 +7,22 @@ import router from './router'
 import store from './store'
 
 
+Vue.use(VueResource);
+
+axios.defaults.baseURL = 'https://ninjafurniturz.heroku.com'
+axios.defaults.headers = {'Content-Type': 'application/json'}
 
 
-// axios.defaults.baseURL = 'https://ninjafurniturz.heroku.com'
-// // axios.defaults.headers.common['Authorization'] = 'fasfdsa'
-// axios.defaults.headers.get['Accepts'] = 'application/json'
 
-// const reqInterceptor = axios.interceptors.request.use(config => {
-//   console.log('Request Interceptor', config)
-//   return config
-// })
-// const resInterceptor = axios.interceptors.response.use(res => {
-//   console.log('Response Interceptor', res)
-//   return res
-// })
+// Response Interceptor to handle and log errors
+axios.interceptors.response.use(function (response) {
+  return response
+},
 
-// axios.interceptors.request.eject(reqInterceptor)
-// axios.interceptors.response.eject(resInterceptor)
+ function (errors) {
+  // eslint-disable-next-line
+  return Promise.resolve(errors)
+})
 
 new Vue({
   el: '#app',
